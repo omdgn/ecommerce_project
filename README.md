@@ -62,7 +62,8 @@ This project incorporates various responsive design principles:
 
 ## 🔗 Live Demo
 
-[https://ecommerce-project-public.onrender.com/](https://ecommerce-project-public.onrender.com/)
+[View Live Site](https://ecommerce-project-public.onrender.com/)
+
 
 ## 🧑‍💻 Developer Note
 
