@@ -4,6 +4,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useDispatch } from 'react-redux';
 import { addVisited } from '../redux/visitedSlice';
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 function ElectronicDeals() {
   const [products, setProducts] = useState([]);
   const scrollRef = useRef(null);
@@ -14,7 +16,7 @@ function ElectronicDeals() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5050/api/electronic-deals')
+      .get(`${BASE_URL}/electronic-deals`)
       .then((res) => setProducts(res.data.ElectronicDeals))
       .catch((err) => console.error('ElectronicDeals verisi alınamadı', err));
   }, []);

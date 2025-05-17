@@ -6,12 +6,14 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 function MainSlider() {
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
     axios
-      .get('http://localhost:5050/api/main-slider')
+      .get(`${baseURL}/main-slider`)
       .then((res) => setSlides(res.data.MainSlider))
       .catch((err) => console.error('MainSlider verisi alınamadı', err));
   }, []);

@@ -9,13 +9,15 @@ import { addVisited } from '../redux/visitedSlice';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 function Recommended() {
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
     axios
-      .get('http://localhost:5050/api/recommended')
+      .get(`${baseURL}/recommended`)
       .then((res) => setProducts(res.data.Recommended))
       .catch((err) => console.error('Recommended verisi alınamadı:', err));
   }, []);
