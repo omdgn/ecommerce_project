@@ -4,7 +4,7 @@ const path = require('path');
 require('dotenv').config();
 
 // Veritabanı dosyası
-const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'appdata.db');
+const DB_PATH = path.join(__dirname, 'appdata.db');
 
 
 // // Veritabanı dosyası
