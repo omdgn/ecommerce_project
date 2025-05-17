@@ -7,7 +7,10 @@ require('dotenv').config();
 const PORT = process.env.PORT || 5050;
 
 
-app.use(cors());            // CORS middleware'i ekledik
+app.use(cors({
+  origin: 'https://ecommerce-project-public.onrender.com',
+}));
+
 app.use(express.json());
 
 // Ana route - test amaçlı
