@@ -7,9 +7,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 5050;
 
 
-app.use(cors({
-  origin: 'https://ecommerce-project-public.onrender.com',
-}));
+app.use(cors());  
 
 app.use(express.json());
 
